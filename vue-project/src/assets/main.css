@@ -1,0 +1,326 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgb( 30, 30, 55) ;
+}
+
+header{
+    display:flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb( 30, 30, 55);
+    box-shadow: 0px 0px 10px 4px;
+    z-index:5;
+
+}
+
+.divTitle{
+    flex: 1;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    justify-content: center;
+}
+    .divTitle p{
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 2em; 
+        color: rgb(245, 247, 250);
+        text-align: center;
+    }
+    .divTitle p b{
+        color: rgb( 30, 30, 55);
+        font-size: 0.6em;
+        background-color: rgb(245, 247, 250);
+        border-radius: 40px;
+        padding: 5px;
+    }
+
+
+.divSearch{
+    flex: 2;
+    min-width: 300px;
+}
+    .inputSearch{
+        position: relative;
+        height: 40px;
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .divSearch input[type=text] {
+        display: block;
+        position: relative;
+        width: 97%;
+        height: 40px;
+        background-color: rgb( 30, 30, 55);
+        color: rgb(245, 247, 250);
+        font-size: 20px;
+        appearance: none;
+        border: none;
+        outline: none;
+        box-shadow: inset 0 0 5px black;
+        border-color: transparent; /*bug dos pontinhos com cor da borda*/
+        border-radius: 18px 18px 18px 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        transition: 0.5s;
+    }
+
+    .divSearch input[type=text]:focus{
+        border: none;
+        box-shadow: none;
+        border-radius: 0px;
+        border-bottom: 1px solid rgb(245, 247, 250);
+    }
+
+    .divSearch input[type=text]::placeholder {
+        color:rgb(245, 247, 250);
+    }
+    .divSearch input[type=text]:focus::placeholder {
+        color: transparent;
+    }
+    .inputSearch button{
+        display: inline-block;
+        position: absolute;
+        right: 3px;
+        top: 10px;
+        border: none;       
+        background-color: transparent;
+    }
+
+.divIcons{
+    flex: 1;
+    float: right;
+    min-width: 200px;
+}
+    .divIcons button{
+        border: none;
+        background-color: rgb( 30, 30, 55);
+        margin-top: 25px;
+        padding: 5px;
+        margin-left: 10px;
+    }
+    #loggedUser{
+        color: rgb(245, 247, 250);
+    }
+    
+    .divIcons button:hover{
+        box-shadow: inset 0 0 5px black;
+        border-radius: 10px;
+    }
+
+.divPosts{
+    position: relative;
+    height: max-content;
+    min-width: 400px;
+    width: 100%;
+    max-width: 1400px;
+    padding-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb( 30, 30, 55);
+   
+}
+    .cardPost{
+        height: fit-content;
+        min-width: 380px;
+        max-width: 1175px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        padding: 25px;
+        background-color: rgb(245, 247, 250);
+        border-radius: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb( 30, 30, 55);
+        box-shadow: 5px 5px 5px 0px black;
+
+    }
+        .cardBody {
+            margin-bottom: 20px;
+        }
+
+
+        .cardBody hr{
+            height: 3px;
+            background-color: rgb( 30, 30, 55);
+            border-radius: 10px;
+            border: none;
+        }
+            .cardBottom{
+                display: flex;
+                position: relative;
+                height: 50px;
+
+            }
+                .bottomLeft{
+                    display: flex;
+                    flex: 1;
+                    float: right;
+                    height: 50px;
+                    min-width: 200px;
+                    justify-content: center;
+                }
+                    .bottomLeft svg{
+                        margin-top:5px;
+                        margin-bottom: 5px;
+                    }
+                    .bottomLeft p{
+                        max-width: fit-content;
+                        padding: 2px;
+                    }
+
+                .bottomCenter{
+                    flex: 3;
+                    min-width: 40px;
+                    height: 100%;
+                    overflow: hidden;
+                }
+
+                .bottomCenter svg{
+                    display: block;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    opacity: 100;
+                }
+
+                .hideSvg{
+                    opacity: 0;
+                }
+
+                .bottomRight{
+                    display: flex;
+                    flex: 1;
+                    float: left;
+                    text-align: end;
+                    height: 50px;
+                    min-width: 175px;
+                    justify-content: center;
+                }
+                    .bottomRight svg{
+                        margin-top:5px;
+                        margin-bottom: 5px;
+                    }
+                    .bottomRight p{
+                        max-width: fit-content; 
+                        padding: 2px;
+                        font-stretch: condensed;
+                    }
+                    
+        .cardComments {
+            position: relative;
+            height: auto;
+            overflow: hidden;
+            background-color: rgb( 247,  247, 250);
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: inset 0 0 5px black;
+            margin: 0px;
+        }
+
+            .cardComment {
+                display: block;
+                height: fit-content;
+                min-height: 40px;
+                width: 95%;
+                background-color: rgb( 30,  30, 55);
+                padding-top: 2px;
+                padding-bottom: 2px;
+                padding-left: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-radius: 15px;
+            }
+
+            .cardComment h4{
+                color: rgb( 247,  247, 250);
+            }
+
+            .cardComment p{
+                color: rgb( 247,  247, 250);
+                padding-left: 20px;
+            }
+
+            .author {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: 20px;
+            }
+
+
+footer{
+    position: fixed;
+    bottom: 20px;
+    left: -50%;
+    right: -50%;
+    height: 40px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(245, 247, 250);
+    border-radius: 25px;
+    border: 5px solid;
+    border-color: rgb( 30,  30, 55);
+    box-shadow: 2px 2px 2px 0px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+footer .pageControls{
+    display: flex;
+    margin-top: 5px;
+}
+
+footer .buttonControls{
+    flex: 1;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+footer .buttonControls .pageStatus{
+    position: relative;
+    height: 26px;
+    width: 26px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: rgb( 30, 30, 55);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(245, 247, 250);
+    transition: 0.2s;
+}
+
+
+footer .pageStatus{
+    width: fit-content;
+    margin: auto;
+}
+
+footer .pageStatus p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb( 30,  30, 55);
+}
+
